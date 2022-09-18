@@ -57,6 +57,7 @@ export const IntroTextBox = styled.div`
   padding: 4rem 0;
 
   @media (max-width: 800px) {
+    ${mixinSection}
     align-items: center;
     text-align: center;
   }

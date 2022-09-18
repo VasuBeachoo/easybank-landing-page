@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { RequestInviteBtn } from "./Buttons";
 import logo from "../assets/logo.svg";
@@ -36,6 +36,31 @@ export const HeaderLink = styled.p`
     text-decoration-thickness: 0.35rem;
     text-underline-offset: 2rem;
   }
+
+  @media (max-width: 800px) {
+    color: var(--Dark-blue);
+  }
+`;
+
+export const MobileLinks = styled.div`
+  display: none;
+
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--Dark-blue);
+    padding: 1.75rem;
+
+    ${HeaderLink} {
+      color: var(--White);
+      font-size: 1.05rem;
+
+      text-underline-offset: 0.5rem;
+    }
+  }
 `;
 
 export const Links = styled.div`
@@ -63,6 +88,15 @@ export const HeaderBox = styled.header`
   background-color: var(--White);
   padding-top: 1rem;
   padding-bottom: 1rem;
+`;
+
+export const HeaderContainer = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
   z-index: 2;
 `;
 
@@ -71,21 +105,40 @@ const Header = ({ className }) => {
 
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleResize = () => {
+    if (window.innerWidth > 800) {
+      setMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  });
+
   const displayHeaderLinks = () => {
-    return headerLinks.map((link) => <HeaderLink>{link}</HeaderLink>);
+    let key = 1000;
+
+    return headerLinks.map((link) => (
+      <HeaderLink key={key++}>{link}</HeaderLink>
+    ));
   };
 
   return (
-    <HeaderBox className={className}>
-      <HeaderLogo src={logo} alt="logo" />
-      <Links>{displayHeaderLinks()}</Links>
-      <HeaderRequestInviteBtn />
-      <HeaderMenuIcon
-        src={menuOpen ? iconMenuClose : iconMenuOpen}
-        alt={menuOpen ? "close-menu-icon" : "open-menu-icon"}
-        onClick={() => setMenuOpen(!menuOpen)}
-      />
-    </HeaderBox>
+    <HeaderContainer className={className}>
+      <HeaderBox>
+        <HeaderLogo src={logo} alt="logo" />
+        <Links>{displayHeaderLinks()}</Links>
+        <HeaderRequestInviteBtn />
+        <HeaderMenuIcon
+          src={menuOpen ? iconMenuClose : iconMenuOpen}
+          alt={menuOpen ? "close-menu-icon" : "open-menu-icon"}
+          onClick={() => setMenuOpen(!menuOpen)}
+        />
+      </HeaderBox>
+      {menuOpen && <MobileLinks>{displayHeaderLinks()}</MobileLinks>}
+    </HeaderContainer>
   );
 };
 

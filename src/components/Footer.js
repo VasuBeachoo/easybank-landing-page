@@ -141,13 +141,19 @@ const Footer = ({ className }) => {
   ];
 
   const displaySocialMediaIcons = () => {
+    let key = 4000;
+
     return socialMediaIcons.map((icon) => (
-      <FooterSocialMediaIcon src={icon.src} alt={icon.alt} />
+      <FooterSocialMediaIcon key={key++} src={icon.src} alt={icon.alt} />
     ));
   };
 
   const displayFooterLinks = () => {
-    return footerLinks.map((link) => <FooterLink>{link}</FooterLink>);
+    let key = 5000;
+
+    return footerLinks.map((link) => (
+      <FooterLink key={key++}>{link}</FooterLink>
+    ));
   };
 
   return (

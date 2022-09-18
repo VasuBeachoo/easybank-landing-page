@@ -16,6 +16,7 @@ export const ArticleBlocks = styled.div`
   @media (max-width: 800px) {
     flex-direction: column;
     align-items: center;
+    gap: 2.5rem;
   }
 `;
 
@@ -89,8 +90,11 @@ const Articles = ({ className }) => {
   ];
 
   const displayArticleBlocks = () => {
+    let key = 3000;
+
     return articleBlocks.map((article) => (
       <ArticleBlock
+        key={key++}
         img={article.img}
         authorName={article.authorName}
         title={article.title}

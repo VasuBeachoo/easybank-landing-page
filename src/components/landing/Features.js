@@ -96,8 +96,11 @@ const Features = ({ className }) => {
   ];
 
   const displayFeatureBlocks = () => {
+    let key = 2000;
+
     return featureBlocks.map((feature) => (
       <FeatureBlock
+        key={key++}
         icon={feature.icon}
         heading={feature.heading}
         description={feature.description}
