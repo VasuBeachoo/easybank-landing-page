@@ -1,10 +1,17 @@
 import styled from "styled-components";
+import { mixinHeavyText, mixinLightText } from "../GlobalStyle";
 
-export const ArticleBlockSample = styled.p``;
+export const ArticleBlockSample = styled.p`
+  ${mixinLightText}
+`;
 
-export const ArticleBlockTitle = styled.h3``;
+export const ArticleBlockTitle = styled.h3`
+  ${mixinHeavyText}
+`;
 
-export const ArticleBlockAuthor = styled.p``;
+export const ArticleBlockAuthor = styled.p`
+  ${mixinLightText}
+`;
 
 export const ArticleBlockTextBox = styled.div``;
 

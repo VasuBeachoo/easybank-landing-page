@@ -4,7 +4,11 @@ import iconOnline from "../../assets/icon-online.svg";
 import iconBudgeting from "../../assets/icon-budgeting.svg";
 import iconOnboarding from "../../assets/icon-onboarding.svg";
 import iconApi from "../../assets/icon-api.svg";
-import { mixinSection } from "../../GlobalStyle";
+import {
+  mixinHeavyText,
+  mixinLightText,
+  mixinSection,
+} from "../../GlobalStyle";
 
 export const FeatureBlocks = styled.div`
   display: flex;
@@ -13,9 +17,13 @@ export const FeatureBlocks = styled.div`
   align-items: flex-start;
 `;
 
-export const FeaturesParagraph = styled.p``;
+export const FeaturesParagraph = styled.p`
+  ${mixinLightText}
+`;
 
-export const FeaturesHeading = styled.h2``;
+export const FeaturesHeading = styled.h2`
+  ${mixinHeavyText}
+`;
 
 export const FeaturesBox = styled.div`
   ${mixinSection}
@@ -23,6 +31,7 @@ export const FeaturesBox = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  background-color: var(--Light-grayish-blue);
 `;
 
 const Features = ({ className }) => {

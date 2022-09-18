@@ -52,6 +52,7 @@ export const FooterBox = styled.footer`
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+  background-color: var(--Dark-blue);
 `;
 
 const Footer = ({ className }) => {

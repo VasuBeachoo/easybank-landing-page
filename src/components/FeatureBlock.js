@@ -1,8 +1,13 @@
 import styled from "styled-components";
+import { mixinHeavyText, mixinLightText } from "../GlobalStyle";
 
-export const FeatureBlockDescription = styled.div``;
+export const FeatureBlockDescription = styled.div`
+  ${mixinLightText}
+`;
 
-export const FeatureBlockHeading = styled.h3``;
+export const FeatureBlockHeading = styled.h3`
+  ${mixinHeavyText}
+`;
 
 export const FeatureBlockIcon = styled.img``;
 

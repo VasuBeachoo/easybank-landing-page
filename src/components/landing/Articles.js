@@ -4,7 +4,7 @@ import imgCurrency from "../../assets/image-currency.jpg";
 import imgRestaurant from "../../assets/image-restaurant.jpg";
 import imgPlane from "../../assets/image-plane.jpg";
 import imgConfetti from "../../assets/image-confetti.jpg";
-import { mixinSection } from "../../GlobalStyle";
+import { mixinHeavyText, mixinSection } from "../../GlobalStyle";
 
 export const ArticleBlocks = styled.div`
   display: flex;
@@ -13,7 +13,9 @@ export const ArticleBlocks = styled.div`
   align-items: flex-start;
 `;
 
-export const ArticlesHeading = styled.h2``;
+export const ArticlesHeading = styled.h2`
+  ${mixinHeavyText}
+`;
 
 export const ArticlesBox = styled.div`
   ${mixinSection}
@@ -21,6 +23,7 @@ export const ArticlesBox = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  background-color: var(--Very-light-gray);
 `;
 
 const Articles = ({ className }) => {

@@ -1,15 +1,19 @@
 import styled from "styled-components";
 import { RequestInviteBtn } from "./Buttons";
 import logo from "../assets/logo.svg";
-import { mixinSection } from "../GlobalStyle";
+import { mixinLightText, mixinSection } from "../GlobalStyle";
 
-export const HeaderLink = styled.p``;
+export const HeaderLink = styled.p`
+  ${mixinLightText}
+  margin: 1.75rem 0;
+`;
 
 export const Links = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: clamp(1rem, 3vw, 1.75rem);
 `;
 
 export const HeaderLogo = styled.img``;
@@ -20,6 +24,8 @@ export const HeaderBox = styled.header`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
+  background-color: var(--White);
 `;
 
 const Header = ({ className }) => {

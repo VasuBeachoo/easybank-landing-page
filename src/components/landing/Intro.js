@@ -1,7 +1,11 @@
 import styled from "styled-components";
 import { RequestInviteBtn } from "../Buttons";
 import introImg from "../../assets/image-mockups.png";
-import { mixinSection } from "../../GlobalStyle";
+import {
+  mixinHeavyText,
+  mixinLightText,
+  mixinSection,
+} from "../../GlobalStyle";
 
 export const IntroImg = styled.img``;
 
@@ -12,9 +16,13 @@ export const IntroImgBox = styled.div`
   align-items: center;
 `;
 
-export const IntroParagraph = styled.p``;
+export const IntroParagraph = styled.p`
+  ${mixinLightText}
+`;
 
-export const IntroHeading = styled.h1``;
+export const IntroHeading = styled.h1`
+  ${mixinHeavyText}
+`;
 
 export const IntroTextBox = styled.div`
   display: flex;
@@ -29,6 +37,7 @@ export const IntroBox = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  background-color: var(--Very-light-gray);
 `;
 
 const Intro = ({ className }) => {
