@@ -15,14 +15,19 @@ export const FeatureBlocks = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 3.5rem;
+  margin-top: 3rem;
 `;
 
 export const FeaturesParagraph = styled.p`
   ${mixinLightText}
+  font-size:clamp(1.025rem, 3vw, 1.1rem);
+  max-width: 60ch;
 `;
 
 export const FeaturesHeading = styled.h2`
   ${mixinHeavyText}
+  font-size: clamp(1.65rem, 4vw, 2rem);
 `;
 
 export const FeaturesBox = styled.div`
@@ -31,7 +36,10 @@ export const FeaturesBox = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 1rem;
   background-color: var(--Light-grayish-blue);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 `;
 
 const Features = ({ className }) => {
