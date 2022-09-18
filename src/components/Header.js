@@ -5,7 +5,16 @@ import { mixinLightText, mixinSection } from "../GlobalStyle";
 
 export const HeaderLink = styled.p`
   ${mixinLightText}
+  user-select: none;
   margin: 1.75rem 0;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: var(--Lime-green);
+    text-decoration-thickness: 0.35rem;
+    text-underline-offset: 2rem;
+  }
 `;
 
 export const Links = styled.div`

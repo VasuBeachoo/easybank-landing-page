@@ -40,7 +40,7 @@ export const mixinLightText = css`
   color: var(--Grayish-blue);
   font-weight: 400;
   letter-spacing: 0.01ch;
-  line-height: 2.5ch;
+  line-height: 2.75ch;
   margin: 0;
 `;
 

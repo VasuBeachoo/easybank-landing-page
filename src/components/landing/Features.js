@@ -22,7 +22,8 @@ export const FeatureBlocks = styled.div`
 export const FeaturesParagraph = styled.p`
   ${mixinLightText}
   font-size:clamp(1.025rem, 3vw, 1.1rem);
-  max-width: 60ch;
+  width: 70%;
+  max-width: 50ch;
 `;
 
 export const FeaturesHeading = styled.h2`
