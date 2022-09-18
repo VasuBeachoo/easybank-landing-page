@@ -4,18 +4,30 @@ import { mixinHeavyText, mixinLightText } from "../GlobalStyle";
 export const ArticleBlockSample = styled.p`
   ${mixinLightText}
   font-size: clamp(0.85rem, 1.5vw, 1rem);
-  max-width: 20ch;
+  max-width: 50ch;
+
+  @media (max-width: 800px) {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+  }
 `;
 
 export const ArticleBlockTitle = styled.h3`
   ${mixinHeavyText}
   font-size: clamp(1rem, 1.75vw, 1.5rem);
   transition: 0.25s;
+
+  @media (max-width: 800px) {
+    font-size: clamp(1rem, 2vw, 1rem);
+  }
 `;
 
 export const ArticleBlockAuthor = styled.p`
   ${mixinLightText}
   font-size: clamp(0.75rem, 1.35vw, 1rem);
+
+  @media (max-width: 800px) {
+    font-size: clamp(0.85rem, 2vw, 1rem);
+  }
 `;
 
 export const ArticleBlockTextBox = styled.div`
@@ -48,6 +60,10 @@ export const ArticleBlockBox = styled.div`
     ${ArticleBlockTitle} {
       color: var(--Lime-green);
     }
+  }
+
+  @media (max-width: 800px) {
+    width: 80%;
   }
 `;
 

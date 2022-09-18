@@ -12,11 +12,20 @@ export const ArticleBlocks = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1.75rem;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const ArticlesHeading = styled.h2`
   ${mixinHeavyText}
-  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-size: clamp(1.75rem, 5vw, 2rem);
+
+  @media (max-width: 800px) {
+    text-align: center;
+  }
 `;
 
 export const ArticlesBox = styled.div`
@@ -29,6 +38,10 @@ export const ArticlesBox = styled.div`
   background-color: var(--Very-light-gray);
   padding-top: 5rem;
   padding-bottom: 5rem;
+
+  @media (max-width: 800px) {
+    align-items: center;
+  }
 `;
 
 const Articles = ({ className }) => {

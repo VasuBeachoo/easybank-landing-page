@@ -25,7 +25,7 @@ const GlobalStyle = styled.createGlobalStyle`
 
 export const mixinSection = css`
   width: 100%;
-  padding: 0 clamp(1rem, 5vw, 5rem);
+  padding: 0 clamp(2rem, 5vw, 5rem);
 `;
 
 export const mixinHeavyText = css`

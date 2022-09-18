@@ -22,6 +22,13 @@ export const CopyrightColumn = styled.div`
   align-items: flex-end;
   gap: 1.5rem;
   margin-left: auto;
+
+  @media (max-width: 800px) {
+    align-items: center;
+    text-align: center;
+    gap: 1.75rem;
+    margin-left: 0;
+  }
 `;
 
 export const FooterLink = styled.p`
@@ -46,6 +53,15 @@ export const FooterLinks = styled.div`
   grid-auto-flow: column;
   row-gap: 1rem;
   column-gap: 4rem;
+
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
 `;
 
 export const FooterSocialMediaIcon = styled.img`
@@ -63,7 +79,11 @@ export const FooterSocialMediaIcons = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
+
+  @media (max-width: 800px) {
+    gap: 1.5rem;
+  }
 `;
 
 export const FooterLogo = styled.img`
@@ -74,7 +94,12 @@ export const FooterLogoColumn = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 2.75rem;
+
+  @media (max-width: 800px) {
+    align-items: center;
+  }
 `;
 
 export const FooterBox = styled.footer`
@@ -88,6 +113,13 @@ export const FooterBox = styled.footer`
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   z-index: 2;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    gap: 3rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 `;
 
 const Footer = ({ className }) => {

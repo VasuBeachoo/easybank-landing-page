@@ -4,6 +4,7 @@ import { mixinHeavyText, mixinLightText } from "../GlobalStyle";
 export const FeatureBlockDescription = styled.div`
   ${mixinLightText}
   font-size: clamp(1.025rem, 3vw, 1.075rem);
+  max-width: 35ch;
 `;
 
 export const FeatureBlockHeading = styled.h3`
@@ -19,6 +20,10 @@ export const FeatureBlockBox = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1.5rem;
+
+  @media (max-width: 800px) {
+    align-items: center;
+  }
 `;
 
 const FeatureBlock = ({ className, icon, heading, description }) => {

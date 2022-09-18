@@ -7,6 +7,6 @@ export const LimeGreenBtn = styled.button`
   color: var(--White);
 `;
 
-export const RequestInviteBtn = () => {
-  return <LimeGreenBtn>Request Invite</LimeGreenBtn>;
+export const RequestInviteBtn = ({ className }) => {
+  return <LimeGreenBtn className={className}>Request Invite</LimeGreenBtn>;
 };

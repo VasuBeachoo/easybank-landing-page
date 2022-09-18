@@ -11,6 +11,12 @@ import {
 export const IntroImg = styled.img`
   position: absolute;
   width: clamp(20rem, 100%, 35rem);
+
+  @media (max-width: 800px) {
+    position: static;
+    transform: translateY(-3rem);
+    width: clamp(10rem, 90%, 35rem);
+  }
 `;
 
 export const IntroImgBox = styled.div`
@@ -23,17 +29,21 @@ export const IntroImgBox = styled.div`
   min-width: 20rem;
   background: url(${introBgDesktop});
   background-size: cover;
+
+  @media (max-width: 800px) {
+    min-width: none;
+  }
 `;
 
 export const IntroParagraph = styled.p`
   ${mixinLightText}
-  font-size: clamp(1rem, 3vw, 1.1rem);
+  font-size: clamp(1.05rem, 3vw, 1.1rem);
   max-width: 40ch;
 `;
 
 export const IntroHeading = styled.h1`
   ${mixinHeavyText}
-  font-size: clamp(1.25rem, 6vw, 2.3rem);
+  font-size: clamp(1.25rem, 7vw, 2.3rem);
   max-width: 15ch;
 `;
 
@@ -45,6 +55,11 @@ export const IntroTextBox = styled.div`
   gap: 1.5rem;
   min-width: 20rem;
   padding: 4rem 0;
+
+  @media (max-width: 800px) {
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 export const IntroBox = styled.div`
@@ -56,6 +71,13 @@ export const IntroBox = styled.div`
   gap: 3rem;
   background-color: var(--Very-light-gray);
   padding-right: 0;
+
+  @media (max-width: 800px) {
+    flex-direction: column-reverse;
+    gap: 0;
+    padding-left: 0;
+    padding-bottom: 2rem;
+  }
 `;
 
 const Intro = ({ className }) => {

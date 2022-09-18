@@ -15,8 +15,14 @@ export const FeatureBlocks = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 3.5rem;
+  gap: clamp(1rem, 4vw, 3.5rem);
   margin-top: 3rem;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
 `;
 
 export const FeaturesParagraph = styled.p`
@@ -41,6 +47,12 @@ export const FeaturesBox = styled.div`
   background-color: var(--Light-grayish-blue);
   padding-top: 5rem;
   padding-bottom: 5rem;
+
+  @media (max-width: 800px) {
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+  }
 `;
 
 const Features = ({ className }) => {
