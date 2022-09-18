@@ -60,7 +60,7 @@ export const mixinButton = css`
 
   &:hover {
     cursor: pointer;
-    opacity: 0.7;
+    filter: brightness(1.25);
   }
 `;
 
