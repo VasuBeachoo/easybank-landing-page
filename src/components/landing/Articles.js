@@ -4,12 +4,24 @@ import imgCurrency from "../../assets/image-currency.jpg";
 import imgRestaurant from "../../assets/image-restaurant.jpg";
 import imgPlane from "../../assets/image-plane.jpg";
 import imgConfetti from "../../assets/image-confetti.jpg";
+import { mixinSection } from "../../GlobalStyle";
 
-export const ArticleBlocks = styled.div``;
+export const ArticleBlocks = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+`;
 
 export const ArticlesHeading = styled.h2``;
 
-export const ArticlesBox = styled.div``;
+export const ArticlesBox = styled.div`
+  ${mixinSection}
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+`;
 
 const Articles = ({ className }) => {
   const articleBlocks = [

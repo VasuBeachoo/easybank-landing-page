@@ -4,14 +4,26 @@ import iconOnline from "../../assets/icon-online.svg";
 import iconBudgeting from "../../assets/icon-budgeting.svg";
 import iconOnboarding from "../../assets/icon-onboarding.svg";
 import iconApi from "../../assets/icon-api.svg";
+import { mixinSection } from "../../GlobalStyle";
 
-export const FeatureBlocks = styled.div``;
+export const FeatureBlocks = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+`;
 
 export const FeaturesParagraph = styled.p``;
 
 export const FeaturesHeading = styled.h2``;
 
-export const FeaturesBox = styled.div``;
+export const FeaturesBox = styled.div`
+  ${mixinSection}
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+`;
 
 const Features = ({ className }) => {
   const featureBlocks = [

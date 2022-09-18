@@ -6,24 +6,53 @@ import iconYouTube from "../assets/icon-youtube.svg";
 import iconTwitter from "../assets/icon-twitter.svg";
 import iconPinterest from "../assets/icon-pinterest.svg";
 import iconInstagram from "../assets/icon-instagram.svg";
+import { mixinSection } from "../GlobalStyle";
 
 export const Copyright = styled.p``;
 
-export const CopyrightColumn = styled.div``;
+export const CopyrightColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-left: auto;
+`;
 
-export const FooterLink = styled.p``;
+export const FooterLink = styled.p`
+  grid-area: auto / auto / span 1 / span 1;
+`;
 
-export const FooterLinks = styled.div``;
+export const FooterLinks = styled.div`
+  display: grid;
+  grid-template: repeat(3, 1fr) / auto;
+  grid-auto-flow: column;
+`;
 
 export const FooterSocialMediaIcon = styled.img``;
 
-export const FooterSocialMediaIcons = styled.div``;
+export const FooterSocialMediaIcons = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const FooterLogo = styled.img``;
 
-export const FooterLogoColumn = styled.div``;
+export const FooterLogoColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+`;
 
-export const FooterBox = styled.footer``;
+export const FooterBox = styled.footer`
+  ${mixinSection}
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+`;
 
 const Footer = ({ className }) => {
   const socialMediaIcons = [
