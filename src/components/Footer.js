@@ -87,6 +87,7 @@ export const FooterBox = styled.footer`
   background-color: var(--Dark-blue);
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+  z-index: 2;
 `;
 
 const Footer = ({ className }) => {

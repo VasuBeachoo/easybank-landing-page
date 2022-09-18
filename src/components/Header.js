@@ -26,6 +26,7 @@ export const HeaderBox = styled.header`
   align-items: center;
   gap: 1rem;
   background-color: var(--White);
+  z-index: 2;
 `;
 
 const Header = ({ className }) => {
