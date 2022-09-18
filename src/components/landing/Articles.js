@@ -11,10 +11,12 @@ export const ArticleBlocks = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 1.75rem;
 `;
 
 export const ArticlesHeading = styled.h2`
   ${mixinHeavyText}
+  font-size: clamp(1.5rem, 5vw, 2rem);
 `;
 
 export const ArticlesBox = styled.div`
@@ -23,7 +25,10 @@ export const ArticlesBox = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 2.5rem;
   background-color: var(--Very-light-gray);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 `;
 
 const Articles = ({ className }) => {
